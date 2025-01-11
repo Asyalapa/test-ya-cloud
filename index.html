@@ -5,39 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Клуб четырех коней</title>
   <link rel="stylesheet" href="./style.css">
+  <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
 </head>
 <body>
   <header class="header">
     <div class="header__container">
       <div class="header__logo-box">
+        <svg class="header__logo-icon">
+          <use xlink:href="./images/sprite.svg#logo-horse"></use>
+        </svg>
+        <svg class="header__logo-icon">
+          <use xlink:href="./images/sprite.svg#logo-horse"></use>
+        </svg>
+        <svg class="header__logo-icon">
+          <use xlink:href="./images/sprite.svg#logo-horse"></use>
+        </svg>
+        <svg class="header__logo-icon">
+          <use xlink:href="./images/sprite.svg#logo-horse"></use>
+        </svg>
         <h1 class="header__title">Клуб<br>четырех&nbsp;коней</h1>
       </div>
       <div class="header__content">
-        <p class="header__large-text right-align">Превратите уездный город</p>
-        <p class="header__large-text center-align">в&nbsp;столицу<br>земного шара</p>
-        <p class="header__small-text">Оплатите взнос на&nbsp;телеграммы для организации Международного васюкинского турнира по&nbsp;шахматам</p>
-        <div class="header__btn-group">
-          <a href="#" class="header__btn header__btn--dark">Поддержать шахматную мысль</a>
-          <a href="#" class="header__btn header__btn--light">Подробнее о&nbsp;турнире</a>
+        <div class="header__content-column--left">
+          <div class="header__title-group">
+            <p class="header__large-text left-align">Превратите<br>уездный город</p>
+            <p class="header__large-text center-align">в&nbsp;столицу</p>
+            <p class="header__large-text right-align">земного шара</p>
+          </div>
+          <p class="header__small-text center-align">Оплатите взнос на&nbsp;телеграммы для организации Международного васюкинского турнира по&nbsp;шахматам</p>
+          <div class="header__btn-group">
+            <a href="#" class="header__btn header__btn--dark">Поддержать шахматную мысль</a>
+            <a href="#" class="header__btn header__btn--light">Подробнее о&nbsp;турнире</a>
+          </div>
+        </div>
+        <div class="header__content-column">
+          <img src="./images/bg-header.png" alt="" class="header__images">
         </div>
       </div>
     </div>
-    <div class="creeping-line">
-      <span class="creeping-line__text">Дело помощи утопающим&nbsp;&mdash; дело рук самих утопающих!</span>
-      <span class="creeping-line__text">·</span>
-      <span class="creeping-line__text">Шахматы двигают вперед не&nbsp;только культуру, но&nbsp;и&nbsp;экономику!</span>
-      <span class="creeping-line__text">·</span>
-      <span class="creeping-line__text">Лед тронулся, господа присяжные заседатели!</span>
-      <span class="creeping-line__text">·</span>
-    </div>
   </header>
+  <div class="creeping-line">
+    <span class="creeping-line__text">Дело помощи утопающим&nbsp;&mdash; дело рук самих утопающих!</span>
+    <span class="creeping-line__text creeping-line__text-separate">·</span>
+    <span class="creeping-line__text">Шахматы двигают вперед не&nbsp;только культуру, но&nbsp;и&nbsp;экономику!</span>
+    <span class="creeping-line__text creeping-line__text-separate">·</span>
+    <span class="creeping-line__text">Лед тронулся, господа присяжные заседатели!</span>
+    <span class="creeping-line__text creeping-line__text-separate">·</span>
+  </div>
   <main class="main">
     <section class="main__section section-lection">
-      <h2 class="section-lection__text">Чтобы поддержать Международный васюкинский турнир посетите лекцию на&nbsp;тему: <span class="different-color">&laquo;Плодотворная дебютная идея&raquo;</span></h2>
+      <h2 class="section-lection__text">Чтобы поддержать Международный васюкинский турнир посетите лекцию на&nbsp;тему: <span class="different-color different-text">&laquo;Плодотворная дебютная идея&raquo;</span></h2>
+      <div class="section-lection__image-box"></div>
     </section>
     <section class="main__section section-games">
+      <div class="section-games__image-box"></div>
       <div class="section-games__content">
-        <h2 class="section-games__text">и&nbsp;Сеанс <span class="different-color">одновременной игры в&nbsp;шахматы на&nbsp;160 досках</span> гроссмейстера О.&nbsp;Бендера</h2>
+        <h2 class="section-games__text">и&nbsp;Сеанс <span class="different-color different-text">одновременной игры в&nbsp;шахматы на&nbsp;160 досках</span> гроссмейстера О.&nbsp;Бендера</h2>
         <table class="section-games__info-table">
           <tbody class="section-games__info-table-body">
             <tr class="section-games__info-table-row">
@@ -59,7 +82,7 @@
             <tr class="section-games__info-table-row">
               <th class="section-games__info-table-header-cell">Взнос на телеграммы:</th>
               <td class="section-games__info-table-cell">
-                <s>100 руб.</s> 21 руб. 16 коп.
+                <s>100 руб.</s><pre>  21 руб. 16 коп.</pre>
               </td>
             </tr>
           </tbody>
@@ -108,9 +131,11 @@
         <h2 class="section-participants__text">Участники турнира</h2>
         <div class="section-participants__arrows">
           <div class="section-participants__arrow-left"></div>
-          <span class="section-participants__current-card">3</span>
-          <span class="section-participants__separator-card"> / </span>
-          <span class="section-participants__all-card">6</span>
+          <div class="section-participants__arrows-text">
+            <span class="section-participants__current-card">3</span>
+            <span class="section-participants__separator-card"> / </span>
+            <span class="section-participants__all-card">6</span>
+          </div>
           <div class="section-participants__arrow-right"></div>
         </div>
       </div>
@@ -156,15 +181,15 @@
       </div>
     </section>
   </main>
+  <div class="creeping-line">
+    <span class="creeping-line__text">Дело помощи утопающим&nbsp;&mdash; дело рук самих утопающих!</span>
+    <span class="creeping-line__text creeping-line__text-separate">·</span>
+    <span class="creeping-line__text">Шахматы двигают вперед не&nbsp;только культуру, но&nbsp;и&nbsp;экономику!</span>
+    <span class="creeping-line__text creeping-line__text-separate">·</span>
+    <span class="creeping-line__text">Лед тронулся, господа присяжные заседатели!</span>
+    <span class="creeping-line__text creeping-line__text-separate">·</span>
+  </div>
   <footer class="footer">
-    <div class="creeping-line">
-      <span class="creeping-line__text">Дело помощи утопающим&nbsp;&mdash; дело рук самих утопающих!</span>
-      <span class="creeping-line__text">·</span>
-      <span class="creeping-line__text">Шахматы двигают вперед не&nbsp;только культуру, но&nbsp;и&nbsp;экономику!</span>
-      <span class="creeping-line__text">·</span>
-      <span class="creeping-line__text">Лед тронулся, господа присяжные заседатели!</span>
-      <span class="creeping-line__text">·</span>
-    </div>
     <div class="footer__container">
       <p class="footer__text">Все персонажи, события и&nbsp;цитаты являются вымышленными и&nbsp;не&nbsp;принадлежат создателям сайта. С&nbsp;подробностями можно познакомиться в&nbsp;главе XXXIV романа Ильи Ильфа и&nbsp;Евгения Петрова &laquo;Двенадцать стульев&raquo;.</p>
     </div>
